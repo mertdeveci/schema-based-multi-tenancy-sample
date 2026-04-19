@@ -1,17 +1,18 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.persistence.entity;
 
-import com.github.mertdeveci.entity.AbstractIdStatusEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "member")
+@Table(name = "merchant_member")
 @Getter
 @Setter
-public class Member extends AbstractIdStatusEntity {
+public class MerchantMember {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -21,9 +22,6 @@ public class Member extends AbstractIdStatusEntity {
 
     @Column(name = "email")
     private String email;
-
-    @Column(name = "password")
-    private String password;
 
     @Column(name = "phone")
     private String phone;

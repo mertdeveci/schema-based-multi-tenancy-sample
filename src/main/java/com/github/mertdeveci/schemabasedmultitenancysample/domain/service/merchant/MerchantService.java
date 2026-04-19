@@ -1,18 +1,20 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.domain.service.merchant;
 
-import com.github.mertdeveci.schemabasedmultitenancysample.domain.repository.MerchantRepository;
+import com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.persistence.repository.MerchantRepository;
 import com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.persistence.entity.Merchant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
-public class MerchantCreateService {
+public class MerchantService {
 
     private final MerchantRepository merchantRepository;
 
-    public void createMerchant(Merchant merchant) {
-        merchantRepository.save(merchant);
+    public Optional<Merchant> retrieveByClientId(String clientId) {
+        return merchantRepository.findByClientId(clientId);
     }
 
 }

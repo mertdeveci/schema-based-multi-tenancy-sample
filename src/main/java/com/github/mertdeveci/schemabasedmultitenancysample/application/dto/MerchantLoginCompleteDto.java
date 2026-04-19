@@ -1,4 +1,4 @@
-package com.github.mertdeveci.schemabasedmultitenancysample.domain.model.response;
+package com.github.mertdeveci.schemabasedmultitenancysample.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class MerchantLoginCompleteResponse extends Response {
+public class MerchantLoginCompleteDto {
     private String token;
 
 }

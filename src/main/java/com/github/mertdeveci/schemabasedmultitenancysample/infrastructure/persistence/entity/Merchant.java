@@ -1,9 +1,6 @@
-package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.entity;
+package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.persistence.entity;
 
-import com.github.mertdeveci.entity.AbstractIdStatusEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,18 +8,18 @@ import lombok.Setter;
 @Table(name = "merchant")
 @Getter
 @Setter
-public class Merchant extends AbstractIdStatusEntity {
+public class Merchant {
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "tenant_name", nullable = false, unique = true, updatable = false)
+    private String tenantName;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "client_id", nullable = false)
+    private String clientId;
 
-    @Column(name = "phone")
-    private String phone;
-
+    @Column(name = "client_secret", nullable = false)
+    private String clientSecret;
 }

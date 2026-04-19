@@ -1,4 +1,4 @@
-package com.github.mertdeveci.utils;
+package com.github.mertdeveci.schemabasedmultitenancysample.common.utils;
 
 import java.util.Date;
 

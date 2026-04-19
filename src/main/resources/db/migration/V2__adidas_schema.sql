@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS x_adidas.merchant_user
 -- passwords 123
 INSERT INTO x_adidas.merchant_user(name, surname, email, username, password)
 VALUES ('mert', 'deveci', 'mertdeveci@iyzico.com', 'mdeveci',
-        '$2a$12$033wbvafpsMqAzVwc2YvTe97qzqknR/6/8y3ezC0IJPKrTDWSDcvu');
+        '$2a$12$fJCU1Osd1uYY.mY0UCUstORE88D9TYnsZ6FQabhl546kr2xTpYaxO');
 
 CREATE TABLE IF NOT EXISTS x_adidas.merchant_member
 (

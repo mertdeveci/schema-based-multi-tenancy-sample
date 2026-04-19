@@ -7,14 +7,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class MerchantLoginInitializeRequest {
+public class MerchantLoginCompleteRequest {
 
     @NotNull
-    @Size(min = 1, max = 100)
-    private String clientId;
-
-    @NotNull
-    @Size(min = 1, max = 100)
-    private String clientSecret;
-
+    private String merchantPassword;
 }
