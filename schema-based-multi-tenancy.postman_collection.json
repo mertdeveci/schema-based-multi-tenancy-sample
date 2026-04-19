@@ -1,0 +1,362 @@
+{
+  "info": {
+    "_postman_id": "a038a3f5-efe0-4e38-a97f-5b540dae9d13",
+    "name": "schema-based-multi-tenancy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32541562"
+  },
+  "item": [
+    {
+      "name": "adidas",
+      "item": [
+        {
+          "name": "adidas-retrieve-members",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZGV2ZWNpIiwiaWF0IjoxNzc2NjM5Mzk1LCJleHAiOjE3NzY2NDI5OTUsInRlbmFudCI6InhfYWRpZGFzIiwicm9sZXMiOlsiUk9MRV9NRVJDSEFOVCJdfQ.Zqs6FuNU3iWCOsrkBemJ_vvvqSICUpxWwb1twD3LjGg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/private/merchant/members",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "private",
+                "merchant",
+                "members"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "adidas-login-initialize",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchantUsername\": \"mdeveci\",\n\t\"clientId\": \"adidas\",\n    \"clientSecret\": \"adidas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/initialize",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "initialize"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "adidas-login-complete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZGV2ZWNpIiwiaWF0IjoxNzc2NjM5MzgyLCJleHAiOjE3NzY2NDI5ODIsInRlbmFudCI6InhfYWRpZGFzIn0.vfbuRLFLRwPkivl8zmkfo1yXZCJ0CaVdodRDynK8AEQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchantPassword\": \"123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/complete",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "complete"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "amazon",
+      "item": [
+        {
+          "name": "amazon-retrieve-members",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG9nYW4iLCJpYXQiOjE3NzY2MzAxMTIsImV4cCI6MTc3NjYzMzcxMiwicm9sZXMiOlsiUk9MRV9NRVJDSEFOVCJdLCJ0ZW5hbnQiOiJ4X2FtYXpvbiJ9.FfnlvJJHfeS5dJJqcwTxmbAFGDcO2VI6Rr757X1b354",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/private/merchant/members",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "private",
+                "merchant",
+                "members"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "amazon-login-initialize",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"clientId\": \"amazon\",\n    \"clientSecret\": \"amazon\",\n    \"merchantUsername\": \"adogan\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/initialize",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "initialize"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "amazon-login-complete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG9nYW4iLCJpYXQiOjE3NzY2MzAxMDMsImV4cCI6MTc3NjYzMzcwMywidGVuYW50IjoieF9hbWF6b24ifQ.rL6eZt-kCf0gcB5XSIWtnX1zFNmBNXQD9SnJ-oY2piE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchantPassword\": \"123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/complete",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "complete"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "apple",
+      "item": [
+        {
+          "name": "apple-retrieve-members",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2JsZS5zY2hpbGxlckBob3RtYWlsLmNvbSIsImlhdCI6MTc3NjU1NDk2MSwiZXhwIjoxNzc2NTU4NTYxLCJyb2xlcyI6WyJST0xFX01FUkNIQU5UIl0sInB1YmxpY0lkIjoiODA2MmRhZTAtOGQyYy00ZWZiLTgwZWEtNDcyYmY4ZDEwOWI0In0.i0DFsWDGFZIvSaQX33uPXSLuzj29YUOJ6fVGxAbXqLA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/private/merchant/members",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "private",
+                "merchant",
+                "members"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "apple-login-initialize",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchantUsername\": \"m.nasifoğlu\",\n\t\"clientId\": \"adidas\",\n    \"clientSecret\": \"adidas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/initialize",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "initialize"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "apple-login-complete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZGV2ZWNpIiwiaWF0IjoxNzc2NjA2NjI0LCJleHAiOjE3NzY2MTAyMjQsInRlbmFudCI6InhfYWRpZGFzIn0.ctBTRCyaoEmGBjjsEVqujCgb2A_TXQ0GrDiiveeu48w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchantPassword\": \"123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/public/login/complete",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "public",
+                "login",
+                "complete"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "item": []
+    }
+  ]
+}
