@@ -1,3 +1,4 @@
+-- ortak bir templates şemasından türetilmesi halinde
 -- param: :schema
 
 DO
