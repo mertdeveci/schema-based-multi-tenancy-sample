@@ -38,9 +38,7 @@ adrese istek atılır. Response olarak bir JWT dönülür,
 içerisinde tenant bilgisi ve yetkiler tanımlanmış olur.
 
 > GET: /api/v1/private/merchant/members
-- 3.adım; ilgili merchant'a ait *member* listesi yukarıdaki
-adresten çekilir.
-
+- 3.adım; Alınan jwt ile yukarıdaki adrese gidilerek, ilgili merchant'a ait *merchant_member* tablosundan member'lar getirilir. 
 
 
 # Avantajlar
