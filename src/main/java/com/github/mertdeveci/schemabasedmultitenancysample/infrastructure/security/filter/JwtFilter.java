@@ -1,7 +1,7 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.security.filter;
 
-import com.github.mertdeveci.schemabasedmultitenancysample.common.contants.MultitenantConstant;
-import com.github.mertdeveci.schemabasedmultitenancysample.common.utils.JwtUtil;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.contants.MultitenantConstant;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils.JwtUtil;
 import com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.multitenancy.TenantContext;
 import com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.security.CustomUserDetailsService;
 import jakarta.servlet.*;

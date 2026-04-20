@@ -1,6 +1,6 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.security;
 
-import com.github.mertdeveci.schemabasedmultitenancysample.common.utils.JwtUtil;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils.JwtUtil;
 import com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.security.filter.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

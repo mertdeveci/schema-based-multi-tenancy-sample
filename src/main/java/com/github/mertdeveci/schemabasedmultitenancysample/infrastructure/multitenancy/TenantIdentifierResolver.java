@@ -1,6 +1,6 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.multitenancy;
 
-import com.github.mertdeveci.schemabasedmultitenancysample.common.contants.MultitenantConstant;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.contants.MultitenantConstant;
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.domain.manager;
 
-import com.github.mertdeveci.schemabasedmultitenancysample.common.utils.JwtUtil;
-import com.github.mertdeveci.schemabasedmultitenancysample.common.utils.ResponseBuilder;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils.JwtUtil;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils.ResponseBuilder;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.request.MerchantLoginCompleteRequest;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.request.MerchantLoginInitializeRequest;
 import com.github.mertdeveci.schemabasedmultitenancysample.application.dto.MerchantLoginCompleteDto;

@@ -1,4 +1,4 @@
-package com.github.mertdeveci.schemabasedmultitenancysample.presentation.controller;
+package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.rest;
 
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.manager.MerchantMemberManager;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.response.Response;

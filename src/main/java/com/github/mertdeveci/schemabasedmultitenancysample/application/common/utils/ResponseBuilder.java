@@ -1,4 +1,4 @@
-package com.github.mertdeveci.schemabasedmultitenancysample.common.utils;
+package com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils;
 
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.enums.ResponseStatus;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.response.Response;

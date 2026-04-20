@@ -2,7 +2,7 @@ package com.github.mertdeveci.schemabasedmultitenancysample.domain.manager;
 
 import com.github.mertdeveci.schemabasedmultitenancysample.application.dto.MerchantMemberDto;
 import com.github.mertdeveci.schemabasedmultitenancysample.application.mapper.MerchantMemberDtoMapper;
-import com.github.mertdeveci.schemabasedmultitenancysample.common.utils.ResponseBuilder;
+import com.github.mertdeveci.schemabasedmultitenancysample.application.common.utils.ResponseBuilder;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.model.response.Response;
 import com.github.mertdeveci.schemabasedmultitenancysample.domain.service.merchantmember.MerchantMemberService;
 import lombok.RequiredArgsConstructor;
