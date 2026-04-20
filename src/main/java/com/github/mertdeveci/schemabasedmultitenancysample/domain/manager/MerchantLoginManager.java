@@ -49,6 +49,9 @@ public class MerchantLoginManager {
         log.info("Creating merchant with username: {}", principal.getName());
         MerchantUser merchantUser = merchantUserService.retrieveByUsername(principal.getName()).
                 orElseThrow(() -> new IllegalStateException("Username not found"));
+        if (!passwordEncoder.matches(request.getMerchantPassword(), merchantUser.getPassword())) {
+            throw new IllegalStateException("Passwords don't match");
+        }
         String jwt = jwtUtil.generateToken(merchantUser, httpServletRequest);
         MerchantLoginCompleteDto merchantLoginCompleteDto = new MerchantLoginCompleteDto(jwt);
         return responseBuilder.prepareSuccessResponse(merchantLoginCompleteDto);
