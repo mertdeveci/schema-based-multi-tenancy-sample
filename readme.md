@@ -34,7 +34,7 @@ clientId&clientSecret bilgileri ile kontrol edilir ve
 
 - 2.adım; merchantPassword bilgisi ilk adımda alınan 
 *completeToken* bilgisi ile birlikte yukarıdaki
-adrese istek atılır. Response içerisindeki JWT 
+adrese istek atılır. Response olarak bir JWT dönülür,
 içerisinde tenant bilgisi ve yetkiler tanımlanmış olur.
 
 > GET: /api/v1/private/merchant/members
