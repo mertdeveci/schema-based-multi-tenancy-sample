@@ -11,9 +11,9 @@ Aşağıdaki ayarları yap
 
 >Her merchant'ın kendi admin'i var(*merchant_user*)
 
-- mert -> adidas
-- adem -> amazon
-- mahmut -> apple
+- mdeveci -> x_adidas
+- adogan -> x_amazon
+- mnasifoğlu -> x_apple
 
 >Her merchant'ın kendi member'ları var(*merchant_member*);
 
@@ -34,13 +34,11 @@ clientId&clientSecret bilgileri ile kontrol edilir ve
 
 - 2.adım; merchantPassword bilgisi ilk adımda alınan 
 *completeToken* bilgisi ile birlikte yukarıdaki
-adrese istek atılır. Response içerisindeki JWT 
+adrese istek atılır. Response olarak bir JWT dönülür,
 içerisinde tenant bilgisi ve yetkiler tanımlanmış olur.
 
 > GET: /api/v1/private/merchant/members
-- 3.adım; ilgili merchant'a ait *member* listesi yukarıdaki
-adresten çekilir.
-
+- 3.adım; Alınan jwt ile yukarıdaki adrese gidilerek, ilgili merchant'a ait *merchant_member* tablosundan member'lar getirilir. 
 
 
 # Avantajlar
