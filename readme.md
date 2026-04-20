@@ -11,9 +11,9 @@ Aşağıdaki ayarları yap
 
 >Her merchant'ın kendi admin'i var(*merchant_user*)
 
-- mert -> adidas
-- adem -> amazon
-- mahmut -> apple
+- mdeveci -> adidas
+- adogan -> amazon
+- mnasifoğlu -> apple
 
 >Her merchant'ın kendi member'ları var(*merchant_member*);
 
