@@ -1,5 +1,6 @@
 package com.github.mertdeveci.schemabasedmultitenancysample.infrastructure.multitenancy;
 
+import com.github.mertdeveci.schemabasedmultitenancysample.common.contants.MultitenantConstant;
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver
     @Override
     public String resolveCurrentTenantIdentifier() {
         String tenant = TenantContext.getTenant();
-        return Objects.requireNonNullElse(tenant, "public");
+        return Objects.requireNonNullElse(tenant, MultitenantConstant.DEFAULT_TENANT);
     }
 
     @Override
